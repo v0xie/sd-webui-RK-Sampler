@@ -4,10 +4,10 @@ import torch
 import torchode
 from tqdm.auto import tqdm
 
-import comfy
-import comfy.model_patcher
-import comfy.samplers
-import comfy.utils
+# import comfy
+# import comfy.model_patcher
+# import comfy.samplers
+# import comfy.utils
 
 from .methods.ae_bosh3 import AEBosh3
 from .methods.ae_cash_karp5 import AECashKarp5
@@ -228,6 +228,7 @@ class RungeKuttaSamplerImpl:
             )
         )
 
+        sigmas = sigmas.to(x.device)
         if self.step_size_controller == "fixed_scheduled":
             step_size_controller = ScheduledController(sigmas=sigmas)
         elif self.step_size_controller == "adaptive_pid":
@@ -318,7 +319,8 @@ class RungeKuttaSampler:
     CATEGORY = "sampling/custom_sampling/samplers"
 
     def get_sampler(self, **kwargs):
-        return (comfy.samplers.KSAMPLER(RungeKuttaSamplerImpl(**kwargs)),)
+        raise NotImplementedError
+        #return (comfy.samplers.KSAMPLER(RungeKuttaSamplerImpl(**kwargs)),)
 
 
 NODE_CLASS_MAPPINGS = {
