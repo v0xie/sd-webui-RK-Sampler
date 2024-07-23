@@ -3,7 +3,6 @@ from modules import sd_samplers, sd_samplers_common, script_callbacks
 from modules.sd_samplers_common import SamplerData
 from modules.sd_samplers_kdiffusion import KDiffusionSampler
 
-from nodes import rk_samplers
 from nodes.nodes_rk_sampler import RungeKuttaSamplerImpl, ADAPTIVE_METHODS, METHODS
 
 rk_samplers = []
