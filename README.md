@@ -1,3 +1,10 @@
+# sd-webui-RK-Sampler
+Port of [@wootwootwootwoot](https://github.com/wootwootwootwoot)'s [ComfyUI-RK-Sampler](https://github.com/wootwootwootwoot/ComfyUI-RK-Sampler) to Automatic1111 WebUI.  
+
+All credit goes to [@wootwootwootwoot](https://github.com/wootwootwootwoot) for the sampler implementations.
+
+---
+
 # ComfyUI-RK-Sampler
 ![example](./workflows/example_comfyui_rk_sampler.jpg)
 
